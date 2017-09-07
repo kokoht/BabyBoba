@@ -10,7 +10,7 @@ const store = new Vuex.Store({
   mutations: {
     increment (state) {
       state.count++
-    },
+    }, 
     incrementtwo (state) {
       state.counttwo++
     },
@@ -20,6 +20,10 @@ const store = new Vuex.Store({
     }
   },
   actions: {
+    nambahDua ({commit, state}, payload) {
+      const newCount = state.count + payload
+      commit('incrementdua', newCount)
+    }
   }
 })
 
