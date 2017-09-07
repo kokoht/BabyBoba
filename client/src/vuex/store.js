@@ -9,10 +9,18 @@ const store = new Vuex.Store({
   mutations: {
     increment (state) {
       state.count++
+    },
+    incrementdua (state, payload) {
+      state.count = payload
     }
   },
   actions: {
+    nambahDua ({commit, state}, payload) {
+      const newCount = state.count + payload
+      commit('incrementdua', newCount)
+    }
   }
 })
+
 
 export default store

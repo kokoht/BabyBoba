@@ -2,12 +2,13 @@
   <div>
     <h1>{{showState}}</h1>
     <button type="button" @click="increment">+</button>
+    <button type="button" @click="nambahDua(2)"> +2 </button>
 
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapActions } from 'vuex'
 
 export default {
   computed: {
@@ -18,6 +19,9 @@ export default {
   methods: {
     ...mapMutations([
       'increment'
+    ]),
+    ...mapActions([
+      'nambahDua'
     ])
   }
 }
