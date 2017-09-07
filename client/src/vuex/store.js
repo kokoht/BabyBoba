@@ -4,14 +4,19 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 500
+    count: 0,
+    counttwo: 0
   },
   mutations: {
     increment (state) {
       state.count++
+    }, 
+    incrementtwo (state) {
+      state.counttwo++
     },
-    incrementdua (state, payload) {
-      state.count = payload
+    reset (state) {
+      state.counttwo = 0
+      state.count = 0
     }
   },
   actions: {
