@@ -4,6 +4,7 @@
       <source src="./assets/babyshark.mp4" type="audio/MP4">
     Your browser does not support the audio element.
     </audio>
+
     <router-view></router-view>
   </div>
 </template>
