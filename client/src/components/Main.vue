@@ -47,7 +47,6 @@ export default {
   methods: {
     addPlayerOne () {
       this.playerone += 1
-      // this.firebaseDatas = this.playerone
       this.$firebaseRefs.firebaseDatas.set({
         babyone: this.playerone
       })
