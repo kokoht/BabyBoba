@@ -3,7 +3,7 @@
 
 
 <!-- here to connect with firebase n vuefire -->
-    <h3>here new button </h3>
+    <!-- <h3>here new button </h3> -->
       <!-- <button @click="addPlayerOne">Add 1</button> -->
       <!-- <p>The button above has been clicked {{ baby1.babyone }} times.</p> -->
 <!-- end here -->
