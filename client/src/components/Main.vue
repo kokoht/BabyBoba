@@ -1,13 +1,29 @@
 <template lang="html">
   <div>
 
+<!-- here bonus item -->
+      <p v-if="showState > 20 && showState <25" @click="show = !show">
+        <a class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-tint"></span>
+        </a>
+      </p>
+      <!-- here just tint - bonus item -->
+<!-- <p v-if="showState > 20 && showState <25" @click="show = !show"> <span class="glyphicon glyphicon-tint"></span></p> -->
+      <!-- endhere -->
+    <!-- <button @click="show = !show">
+        AddBlood
+      </button> -->
+      <transition name="slide-fade">
+        <p v-if="!show">[ 1 x Stich ]</p>
+      </transition>
+      <!-- end here -->
 
 <!-- here to connect with firebase n vuefire -->
     <!-- <h3>here new button </h3> -->
       <!-- <button @click="addPlayerOne">Add 1</button> -->
       <!-- <p>The button above has been clicked {{ baby1.babyone }} times.</p> -->
 <!-- end here -->
-    <h1>WELCOME TO BABY BOBA</h1>
+    <h1>BABY BOBA</h1>
     <h2> {{showDiff}} </h2>
     <!-- <h1> {{showWinner}} </h1> -->
     <div v-if="showWinner" :class="modalClass" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:block">
@@ -76,7 +92,8 @@ import playertwo from '@/components/playertwo'
 export default {
   data () {
     return {
-      playerone: 0
+      playerone: 0,
+      show: true
     }
   },
   // firebase: {
@@ -145,5 +162,15 @@ export default {
 </script>
 
 <style>
-
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 </style>
