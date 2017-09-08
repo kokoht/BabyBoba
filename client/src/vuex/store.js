@@ -3,15 +3,17 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 import firebase from 'firebase'
 var config = {
-  apiKey: 'AIzaSyCAndawPNofKLlN9W3EjWGYtqYnH1CneSc',
-  databaseURL: 'https://movie-trailer-175012.firebaseio.com',
-  projectId: 'movie-trailer-175012',
-  storageBucket: 'movie-trailer-175012.appspot.com',
-  messagingSenderId: '584104791052'
+  // apiKey: 'AIzaSyCAndawPNofKLlN9W3EjWGYtqYnH1CneSc',
+  // databaseURL: 'https://movie-trailer-175012.firebaseio.com',
+  // projectId: 'movie-trailer-175012',
+  // storageBucket: 'movie-trailer-175012.appspot.com',
+  // messagingSenderId: '584104791052'
+  databaseURL: 'https://vuefire-69bb2.firebaseio.com',
+  projectId: 'vuefire-69bb2'
 }
 var firebaseApp = firebase.initializeApp(config)
 var db = firebaseApp.database()
-var baby = db.ref('baby')
+var baby = db.ref('babyboba')
 // var babyTwo = db.ref('baby/two')
 
 const store = new Vuex.Store({
