@@ -2,7 +2,7 @@
   <div class='container'>
     <h1>{{showState}}</h1>
 
-    <button type="button" @click="incrementtwo">
+    <button type="button" @click="incrementtwo" class="shake-lr">
       <img v-if="showState >= 0 && showState <30" src="../assets/baby.png">
       <img v-if="showState >= 30 && showState <50" src="../assets/mama.png">
       <img v-if="showState >= 50 && showState <80" src="../assets/grandma.png">

@@ -10,11 +10,118 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ultra|VT323" rel="stylesheet">
     <title>client</title>
-    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   </head>
-  <body>
+  <body class="color-change-2x">
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
+
+<style>
+h1{
+  font-family: 'Ultra', serif;
+}
+
+h2{
+  font-family: 'VT323', monospace;
+}
+
+h3{
+  font-family: 'VT323', monospace;
+}
+.color-change-2x {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+          animation: color-change-2x 2s linear infinite alternate both;
+}
+
+.shake-lr {
+	-webkit-animation: shake-lr 4.5s steps(2, end) infinite both;
+	        animation: shake-lr 4.5s steps(2, end) infinite both;
+}
+
+ @-webkit-keyframes shake-lr {
+   0%,
+   100% {
+     -webkit-transform: rotate(0deg);
+             transform: rotate(0deg);
+     -webkit-transform-origin: 50% 50%;
+             transform-origin: 50% 50%;
+   }
+   10% {
+     -webkit-transform: rotate(8deg);
+             transform: rotate(8deg);
+   }
+   20%,
+   40%,
+   60% {
+     -webkit-transform: rotate(-10deg);
+             transform: rotate(-10deg);
+   }
+   30%,
+   50%,
+   70% {
+     -webkit-transform: rotate(10deg);
+             transform: rotate(10deg);
+   }
+   80% {
+     -webkit-transform: rotate(-8deg);
+             transform: rotate(-8deg);
+   }
+   90% {
+     -webkit-transform: rotate(8deg);
+             transform: rotate(8deg);
+   }
+ }
+ @keyframes shake-lr {
+   0%,
+   100% {
+     -webkit-transform: rotate(0deg);
+             transform: rotate(0deg);
+     -webkit-transform-origin: 50% 50%;
+             transform-origin: 50% 50%;
+   }
+   10% {
+     -webkit-transform: rotate(8deg);
+             transform: rotate(8deg);
+   }
+   20%,
+   40%,
+   60% {
+     -webkit-transform: rotate(-10deg);
+             transform: rotate(-10deg);
+   }
+   30%,
+   50%,
+   70% {
+     -webkit-transform: rotate(10deg);
+             transform: rotate(10deg);
+   }
+   80% {
+     -webkit-transform: rotate(-8deg);
+             transform: rotate(-8deg);
+   }
+   90% {
+     -webkit-transform: rotate(8deg);
+             transform: rotate(8deg);
+   }
+ }
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #5256ED;
+  }
+  100% {
+    background: #46A2D0;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #5256ED;
+  }
+  100% {
+    background: #46A2D0;
+  }
+}
+</style>
